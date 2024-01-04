@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+
+# check if user is root
+if [ $(id -u) -ne 0 ]; then
+    echo "Please run as root"
+    exit
+fi
+
+# check if arguments are given
+if [ $# -ne 1 ]; then
+    echo "The username for installation is required"
+    echo "Usage: $0 <username>"
+    exit
+fi
+
+username=$1
+
+# check if custom repo is already added
+if grep -q endeavouros /etc/pacman.conf; then
+    echo "EndeavourOS repo already added"
+else
+    # add custom repo
+    echo "" >>/etc/pacman.conf
+    echo "[endeavouros]" >>/etc/pacman.conf
+    echo "SigLevel = PackageRequired" >>/etc/pacman.conf
+    echo "Include = /etc/pacman.d/endeavouros-mirrorlist" >>/etc/pacman.conf
+    echo 'Server = https://github.com/endeavouros-team/repo/raw/master/$repo/$arch' >>/etc/pacman.d/endeavouros-mirrorlist
+    echo "" >>/etc/pacman.conf
+    pacman -Syu --noconfirm
+fi
+# finish up installation
+# install packages
+## endeavourOS packages
+# cp -r etc/skel/{*,.*} /etc/skel/ # errors if pattern doesn't match
+cp -r etc/skel/* /etc/skel/
+cp -r etc/skel/.* /etc/skel/
+
+runuser -l $username -c "cp -r /etc/skel/{*} /home/$username/"
+runuser -l $username -c "cp -r /etc/skel/.* /home/$username/"
+
+cat packages/pacman/* | cut -d '#' -f 1 | sed '/^$/d' | tr -d ' ' >pkglist.txt
+
+pacman -S --needed - <pkglist.txt

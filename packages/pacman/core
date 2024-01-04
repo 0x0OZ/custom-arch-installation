@@ -1,0 +1,21 @@
+acpi # power management stuff
+gvfs # virtual filesystem
+gvfs-afc # virtual filesystem
+gvfs-gphoto2 # virtual filesystem
+gvfs-mtp # virtual filesystem
+gvfs-nfs # virtual filesystem
+gvfs-smb # virtual filesystem
+jq # can't live without json processor right?
+sysstat # performance monitoring tools
+diffutils
+findutils
+find-the-command
+fzf
+man-db
+networkmanager
+p7zip
+unzip
+wget
+# zsh & zsh utils
+zsh
+zsh-autosuggestions

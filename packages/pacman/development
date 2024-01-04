@@ -1,0 +1,23 @@
+# langs & pkg managers
+gcc
+go
+git
+nodejs
+npm
+perl
+php
+python2
+python3
+python-pip
+ruby
+rubygems
+# utils
+github-cli
+gnu-netcat
+neovim
+emacs-nox
+nano
+ncdu
+docker
+docker-compose
+tmux # who doesn't love tmux?

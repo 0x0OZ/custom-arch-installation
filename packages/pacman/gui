@@ -1,0 +1,39 @@
+arandr # screen resolution 
+arc-gtk-theme-eos # gtk theme
+archlinux-xdg-menu # idk
+awesome-terminal-fonts
+dex # desktop entry generator / executer
+dunst # notification daemon
+feh # open image files / manage wallpaper
+gtk-engine-murrine # 
+gthumb # image browser viewer
+lxappearance-gtk3 # gtk theme switcher
+network-manager-applet # applet for network management
+numlockx # enable numkeys in X11
+mpv # media player 
+playerctl # audio start/stop etc...
+rofi # window switcher 
+scrot # screenshooter
+tumbler # thumbnail service 
+galculator # gui calc
+polkit-gnome # polkit auth agent
+eos-lightdm-slick-theme # login manager theme
+lightdm-slick-greeter # greeter
+lightdm # login manager
+eos-qogir-icons # icons
+xfce4-terminal # terminal
+file-roller # archived files maanger
+thunar # file manager
+thunar-archive-plugin # file manager
+thunar-volman # file manager
+xed # text editor
+
+xdg-user-dirs-gtk # create dirs and recolize them?
+xorg-xbacklight # control brightness
+xorg-xdpyinfo # display info for X11
+
+i3-wm # WindowManager
+i3blocks # bar
+i3lock # lock screen
+i3status # status for the bar
+
