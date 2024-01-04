@@ -26,7 +26,6 @@ else
     echo "Include = /etc/pacman.d/endeavouros-mirrorlist" >>/etc/pacman.conf
     echo 'Server = https://github.com/endeavouros-team/repo/raw/master/$repo/$arch' >>/etc/pacman.d/endeavouros-mirrorlist
     echo "" >>/etc/pacman.conf
-    pacman -Syu --noconfirm
 fi
 # finish up installation
 # install packages
@@ -40,4 +39,9 @@ runuser -l $username -c "cp -r /etc/skel/.* /home/$username/"
 
 cat packages/pacman/* | cut -d '#' -f 1 | sed '/^$/d' | tr -d ' ' >pkglist.txt
 
+pacman -Syu --noconfirm
 pacman -S --needed - <pkglist.txt
+for i in $(cat pkglist.txt)
+do 
+pacman -S $i --noconfirm
+done

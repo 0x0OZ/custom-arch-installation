@@ -31,9 +31,12 @@ xed # text editor
 xdg-user-dirs-gtk # create dirs and recolize them?
 xorg-xbacklight # control brightness
 xorg-xdpyinfo # display info for X11
+xorg
+xorg-xinit
+
 
 i3-wm # WindowManager
 i3blocks # bar
+i3status # status for i3blocks
+polybar # better bar
 i3lock # lock screen
-i3status # status for the bar
-
