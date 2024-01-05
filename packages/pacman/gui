@@ -20,6 +20,7 @@ polkit-gnome # polkit auth agent
 eos-lightdm-slick-theme # login manager theme
 lightdm-slick-greeter # greeter
 lightdm # login manager
+lightdm-gtk-greeter # greeter that make it works
 eos-qogir-icons # icons
 xfce4-terminal # terminal
 file-roller # archived files maanger
